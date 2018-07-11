@@ -6,8 +6,8 @@ phases:
         - aws s3 cp s3://cloud-admin-ben-jars/ojdbc.jar .
         - mvn install:install-file -Dfile="ojdbc7.jar" -DgroupId="com.oracle" -DartifactId="ojdbc7" -Dversion="12.1.0" -Dpackaging="jar"
     build:
-    commands:
-      - mvn clean package
+      commands:
+        - mvn clean package
 artifacts:
   files:
     - target/java-demo.war
